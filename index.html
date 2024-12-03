@@ -1,210 +1,159 @@
 <!DOCTYPE html>
-<html lang="CAN-en">
+<html lang="en-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-      /* Style for text */
-      body {
-      font-family: Times New Roman;
-      }
+        /* General styling */
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+        }
 
-      p {
-        width: 600px;
-        padding-bottom: 20px;
-      }
-      
-      /* Style for the grid system */
+        p {
+            width: 600px;
+            padding-bottom: 20px;
+        }
 
-      #leftContainer {
-        width: 150px;
-        height: 100vh; /* Full height */
-        background-color: #333;
-        float: left;
-        padding: 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-      }
+        /* CSS Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 75%;
+            height: 100vh; /* Full height */
+        }
 
-      /* Style for the navigation links */
-      .vertical-nav a {
-        text-decoration: none;
-        color: white;
-        padding: 15px;
-        text-align: left;
-        display: block;
-        font-family: Times New Roman, serif;
-      }
+        #leftContainer {
+          background-color: #333;
+          padding: 0;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 150px; 
+        }
 
-    #rightContainer {
-      width: 600px;
-      background-color: transparent;
-      clear: both;
-      position: relative;
-      bottom: 20px;
-      float: left;
-      padding: 20px;
-    }
+        .vertical-nav a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: block;
+        }
 
-    #blockA {
-      background-color: #96C5F7;
-      width: 310px;
-      height: 310px;
-      display: inline;
-      float: left;
-      
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-bottom: 10px;
-    }
+        .vertical-nav a:hover {
+            background-color: #575757;
+            width: 100%;
+        }
 
-    #blockB {
-      background-color: #A9D3FF;
-      width: 310px;
-      height: 310px;
-      display: inline;
-      float: left;
-      
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-bottom: 10px;
-      
-      margin-left: 5px; 
-      margin-right: 5px;
-    }
+        #rightContainer {
+            background-color: transparent;
+            padding: 0px;
+            overflow-y: auto; /* Adds a scrollbar if content overflows */
+        }
 
-    #blockC {
-      background-color: #F2F4FF;
-      width: 300px;
-      height: 300px;
-      display: inline;
-      float: left;
-      
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      padding-bottom: 10px;
-      
-      border: 5px solid black;
-    }
+        /* Box Model */
+        #blockA, #blockB, #blockC {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 5px;
+            padding: 10px;
+        }
 
-    /* Floating */
+        #blockA { background-color: #96C5F7; }
+        #blockB { background-color: #A9D3FF; }
+        #blockC { background-color: #F2F4FF; border: 5px solid black; }
 
-    #container2 {
-      width: 800px;
-      height: 500px;
-      background-color: #D0D6B5;
-      clear: both;
-    }
+        /* Floating */
+        #container2 {
+            width: 100%;
+            height: auto;
+            background-color: #D0D6B5;
+            margin-top: 20px;
+            clear: both;
+        }
 
-    #blockD {
-      width: 600px;
-      height: 200px;
-      background-color: #F9B5AC;
-      float: left;
-    }
+        #blockD {
+            width: 600px;
+            height: 200px;
+            background-color: #F9B5AC;
+            float: left;
+        }
 
-    #blockE {
-      width: 200px;
-      height: 200px;
-      background-color: #EE7674;
-      float: right;
-    }
+        #blockE {
+            width: 200px;
+            height: 200px;
+            background-color: #EE7674;
+            float: right;
+        }
 
-    /* Positioning */
+        /* Positioning */
+        #container3 {
+            width: 100%;
+            height: auto;
+            background-color: #2DE1C2;
+            margin-top: 20px;
+            position: relative;
+        }
 
-    #container3 {
-      width: 1000px;
-      height: 500px;
-      background-color: #2DE1C2;
-      clear: both;
-      position: relative;
-      top: 20px;
-    }
+        #blockG {
+            width: 333px;
+            height: 200px;
+            background-color: #7FBEAB;
+            float: left;
+            margin: 10px;
+        }
 
-    #blockG {
-      width: 333px;
-      height: 200px;
-      background-color: #7FBEAB;
-      float: left;
-      position: relative; 
-      top: 50px;
-      left: 50px;
-    }
-
-    #blockH {
-      width: 333px;
-      height: 200px;
-      background-color: #7E998A;
-      float: left;
-      position: fixed;
-      top: 360px;
-    }
-
-
-      /* Hover effect for the navigation links */
-      .vertical-nav a:hover {
-          background-color: #575757;
-      }
-  </style>
+        #blockH {
+            width: 333px;
+            height: 200px;
+            background-color: #7E998A;
+            float: left;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Left container --> 
-  <div id="leftContainer">
-    <div class="vertical-nav">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#services">SERVICES</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </div>
-  <!-- Grid system -->
-  <h1>About Me</h1>
-    <p>Hi! I'm Chloe Hodgins, a multidisciplinary product and user interface designer with a background in robotic design and coding. As I continued to grow my passion for art and graphic design I unlocked another interest in robotics and tech, leading to winning a robot design competition. Exposure to health care devices led to my design philosophy: <strong><u>Design made for people should be designed for people.</u></strong></p>
-  <p>
-    Today, I'm pursuing an Honours Bachelor degree in Global Business and Digital Arts at Waterloo University to fulfill my dream of designing medical device screens that put users first. 
-  </p>
+    <div class="grid-container">
+        <!-- Left Container: Vertical Navigation -->
+        <div id="leftContainer">
+            <div class="vertical-nav">
+              <a href="#forground">FOREGROUND</a>
+              <a href="#my mind">MY MIND</a>
+              <a href="#storytime">STORYTIME</a>
+              <a href="#resume">RESUME</a>
+              <a href="#contact">CONTACT</a>
+            </div>
+        </div>
 
-    <div id="rightContainer">
-      <h2>The Box Model</h2>
-      <div id="blockA">
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <div id="blockB">
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </div>
-      <div id="blockC">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-    </div>
+        <!-- Right Container: Main Content -->
+        <div id="rightContainer">
+            <h1>About Me</h1>
+            <p>Hi!</p>
+            <h2>The Box Model</h2>
+            <div id="blockA">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div id="blockB">
+                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
+            <div id="blockC">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
 
-    <div id="container2">
-      <h2>Floating</h2>
-      <div id="blockD">
-      </div>
-      <div id="blockE">
-      </div>
-    </div>
+            <div id="container2">
+                <h2>Floating</h2>
+                <div id="blockD"></div>
+                <div id="blockE"></div>
+            </div>
 
-    <div id="container3">
-      <h2>Positioning</h2>
-      <div id="blockG">
-      </div>
-      <div id="blockH">
-      </div>
-      <div id="blockI">
-      </div>
+            <div id="container3">
+                <h2>Positioning</h2>
+                <div id="blockG"></div>
+                <div id="blockH"></div>
+            </div>
+        </div>
     </div>
-  
-
-  <!-- Content -->
-  <div style="margin-left: 220px; padding: 20px;">
-      <h1>Welcome!</h1>
-      <p>Click on the links in the navigation bar to explore.</p>
-  </div>
 </body>
 </html>
