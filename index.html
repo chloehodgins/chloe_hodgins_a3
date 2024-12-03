@@ -7,20 +7,15 @@
     <style>
         /* General styling */
         body {
-            margin: 0;
-            font-family: 'Times New Roman', serif;
-        }
-
-        p {
-            width: 600px;
-            padding-bottom: 20px;
+          margin: 0;
+          font-family: 'Times New Roman', serif;
         }
 
         /* CSS Grid Layout */
         .grid-container {
-            display: grid;
-            grid-template-columns: 10% 75%;
-            height: 100vh; /* Full height */
+          display: grid;
+          grid-template-columns: 10% 90%;
+          height: 100vh; /* Full height */
         }
 
         #leftContainer {
@@ -41,82 +36,36 @@
           justify-content: center; /* Center text horizontally */
           align-items: center; /* Center text vertically */
           text-align: center;
-          padding: 76px 0;
-          font-size: 12;
+          padding: 40px 0; /* Adjust padding */
+          font-size: 14px;
           transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
         }
 
         .vertical-nav a:hover {
           background-color: grey;
           color: blue;
-          width: 100%;
         }
 
         #rightContainer {
-            background-color: transparent;
-            padding: 20px;
-            overflow-y: auto; /* Adds a scrollbar if content overflows */
+          background-color: transparent;
+          padding: 20px;
+          overflow-y: auto; /* Adds a scrollbar if content overflows */
+        }
+      
+        #foreground {
+          margin: 0 auto; /* Center the block horizontally */
+          padding: 20px; /* Add padding inside the block */
+          height: 50%; 
         }
 
-        /* Box Model */
-        #blockA, #blockB, #blockC {
-            width: 300px;
-            height: 300px;
-            float: left;
-            margin: 5px;
-            padding: 10px;
+        /* Section Styling */
+        section {
+          padding: 40px;
+          margin: 20px 0;
         }
 
-        #blockA { background-color: #96C5F7; }
-        #blockB { background-color: #A9D3FF; }
-        #blockC { background-color: #F2F4FF; border: 5px solid black; }
-
-        /* Floating */
-        #container2 {
-            width: 100%;
-            height: auto;
-            background-color: #D0D6B5;
-            margin-top: 20px;
-            clear: both;
-        }
-
-        #blockD {
-            width: 600px;
-            height: 200px;
-            background-color: #F9B5AC;
-            float: left;
-        }
-
-        #blockE {
-            width: 200px;
-            height: 200px;
-            background-color: #EE7674;
-            float: right;
-        }
-
-        /* Positioning */
-        #container3 {
-            width: 100%;
-            height: auto;
-            background-color: #2DE1C2;
-            margin-top: 20px;
-            position: relative;
-        }
-
-        #blockG {
-            width: 333px;
-            height: 200px;
-            background-color: #7FBEAB;
-            float: left;
-            margin: 10px;
-        }
-
-        #blockH {
-            width: 333px;
-            height: 200px;
-            background-color: #7E998A;
-            float: left;
-            margin: 10px;
+        section h2 {
+          margin-top: 0;
         }
     </style>
 </head>
@@ -125,40 +74,40 @@
         <!-- Left Container: Vertical Navigation -->
         <div id="leftContainer">
             <div class="vertical-nav">
-              <a href="#forground">FOREGROUND</a>
-              <a href="#my mind">MY MIND</a>
-              <a href="#storytime">STORYTIME</a>
-              <a href="#resume">RESUME</a>
-              <a href="#contact">CONTACT</a>
+                <a href="#foreground">FOREGROUND</a>
+                <a href="#mymind">MY MIND</a>
+                <a href="#storytime">STORYTIME</a>
+                <a href="#resume">RESUME</a>
+                <a href="#contact">CONTACT</a>
             </div>
         </div>
 
         <!-- Right Container: Main Content -->
         <div id="rightContainer">
-            <h1>About Me</h1>
-            <p>Hi!</p>
-            <h2>The Box Model</h2>
-            <div id="blockA">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-            <div id="blockB">
-                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-            </div>
-            <div id="blockC">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+            <section id="foreground">
+                <h2>Foreground</h2>
+                <p>This is the Foreground section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra ligula sit amet nibh ultrices, a convallis elit cursus.</p>
+            </section>
 
-            <div id="container2">
-                <h2>Floating</h2>
-                <div id="blockD"></div>
-                <div id="blockE"></div>
-            </div>
+            <section id="mymind">
+                <h2>My Mind</h2>
+                <p>This is the My Mind section. Vivamus aliquet, libero eget fermentum commodo, arcu lectus consequat sapien, at sodales nisi velit et felis.</p>
+            </section>
 
-            <div id="container3">
-                <h2>Positioning</h2>
-                <div id="blockG"></div>
-                <div id="blockH"></div>
-            </div>
+            <section id="storytime">
+                <h2>Storytime</h2>
+                <p>This is the Storytime section. Maecenas volutpat ligula non enim dignissim varius. Sed porttitor, mauris a scelerisque varius, nunc neque lacinia libero, a vulputate sem justo nec dui.</p>
+            </section>
+
+            <section id="resume">
+                <h2>Resume</h2>
+                <p>This is the Resume section. Suspendisse potenti. Fusce vel mauris magna. Integer nec lorem at urna venenatis vehicula.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>This is the Contact section. Quisque tincidunt nec nulla eget vestibulum. Nam quis felis lacinia, malesuada libero sed, egestas lectus.</p>
+            </section>
         </div>
     </div>
 </body>
