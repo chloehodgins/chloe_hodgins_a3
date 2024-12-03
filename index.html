@@ -17,12 +17,35 @@
       
       /* Style for the grid system */
 
-    #container1 {
-      width: 1000px;
+      #leftContainer {
+        width: 150px;
+        height: 100vh; /* Full height */
+        background-color: #333;
+        float: left;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Style for the navigation links */
+      .vertical-nav a {
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        display: block;
+        font-family: Times New Roman, serif;
+      }
+
+    #rightContainer {
+      width: 600px;
       background-color: transparent;
       clear: both;
       position: relative;
       bottom: 20px;
+      float: left;
+      padding: 20px;
     }
 
     #blockA {
@@ -122,26 +145,6 @@
       top: 360px;
     }
 
-      /* Style for the navigation bar container */
-      .vertical-nav {
-        width: 200px;
-        height: 100vh; /* Full height of the viewport */
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-      }
-      
-      /* Style for the navigation links */
-      .vertical-nav a {
-          text-decoration: none;
-          color: white;
-          padding: 15px;
-          text-align: left;
-          display: block;
-          font-family: Times New Roman, serif;
-      }
 
       /* Hover effect for the navigation links */
       .vertical-nav a:hover {
@@ -150,6 +153,15 @@
   </style>
 </head>
 <body>
+  <!-- Left container --> 
+  <div id="leftContainer">
+    <div class="vertical-nav">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
   <!-- Grid system -->
   <h1>About Me</h1>
     <p>Hi! I'm Chloe Hodgins, a multidisciplinary product and user interface designer with a background in robotic design and coding. As I continued to grow my passion for art and graphic design I unlocked another interest in robotics and tech, leading to winning a robot design competition. Exposure to health care devices led to my design philosophy: <strong><u>Design made for people should be designed for people.</u></strong></p>
@@ -157,7 +169,7 @@
     Today, I'm pursuing an Honours Bachelor degree in Global Business and Digital Arts at Waterloo University to fulfill my dream of designing medical device screens that put users first. 
   </p>
 
-    <div id="container1">
+    <div id="rightContainer">
       <h2>The Box Model</h2>
       <div id="blockA">
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -187,20 +199,6 @@
       <div id="blockI">
       </div>
     </div>
-  
-  
-  <div class="grid-container">
-    <div class="header">Header</div>
-    
-    <!-- Vertical navigation bar -->
-    <div class="vertical-nav">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#services">SERVICES</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </div>
-  
   
 
   <!-- Content -->
